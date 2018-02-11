@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import WIB
-from WIB.libapi.ttypes import *
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import io,os,re,ast,six,sys,glob,json,time,timeit,codecs,random,shutil,urllib,urllib2,urllib3,goslate,html5lib,requests,threading,wikipedia,subprocess,googletrans
 from gtts import gTTS
@@ -20,7 +20,7 @@ else:
     import urllib.request
     import urllib.parse
 
-cl = WIB.LINE()
+cl = LINECTR.LINE()
 cl.login(token="EpZmr1vHTETBgTktOSFd.rLylacrPH39WJb0UIwB8Nq.iF+C5K0kG+xhIuIcc90vb1ER+7aCRdeMt1j/ocjPQSU=")
 cl.loginResult()
 
