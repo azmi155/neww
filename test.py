@@ -151,7 +151,7 @@ helpSettings = """「⚙️」- Hᴇʟᴘ ғᴏʀ Sᴇᴛᴛɪɴɢ -「⚙️」
 ╠͜͡✰ 「Cᴏᴍᴍᴇɴᴛ sᴇᴛ:」	
 ╠͜͡✰ 「Pᴇsᴀɴ ᴀᴅᴅ:」	
 ╠͜͡✰ 「Pᴇsᴀɴ ᴀᴅᴅ ᴄᴇᴋ」
-╚══════════════╝"""
+"""
 helpProtect = """「🛡️」- Hᴇʟᴘ ғᴏʀ Pʀᴏᴛᴇᴄᴛ -「🛡️」
 
 ╔═══════════════╗
@@ -802,7 +802,7 @@ def bot(op):
         if op.type == 24:
             if wait["leaveRoom"] == True:
                 cl.leaveRoom(op.param1)
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
@@ -844,7 +844,7 @@ def bot(op):
                     cl.like(url[25:58], url[66:], likeType=1003)
                     cl.comment(url[25:58], url[66:], wait["comment"])
 #------------------------------------------------------------------------------------------#
-            if op.type == 25:
+            if op.type == 26:
                 msg = op.message
             if "@"+cl.getProfile().displayName in msg.text:
                  if wait["tagVN"] == True:
@@ -908,14 +908,14 @@ def bot(op):
                 cl.sendText(msg.to, Vonis)
                 cl.kickoutFromGroup(msg.to, [msg.from_])
                 
-        if op.type == 25:
+        if op.type == 26:
             if wait["alwaysRead"] == True:
                 if msg.toType == 0:
                     cl.sendChatChecked(msg.from_,msg.id)
                 else:
                     cl.sendChatChecked(msg.to,msg.id)
                     
-        if op.type == 25:
+        if op.type == 26:
             if wait["alwaysRead"] == True:
                 msg = op.message
                 if msg.toType == 2:
@@ -923,20 +923,20 @@ def bot(op):
                     msg.from_ = msg.from_
                     cl.sendChatChecked(msg.to,msg.id)
                     
-        if op.type == 25:
+        if op.type == 26:
             if wait["removeChat"] == True:
                 if msg.toType == 0:
                     cl.sendChatRemoved(msg.from_,msg.id)
                 else:
                     cl.sendChatRemoved(msg.to,msg.id)
-        if op.type == 25:
+        if op.type == 26:
             if wait["removeChat"] == True:
                 msg = op.message
                 if msg.toType == 2:
                     msg.to = msg.to
                     msg.from_ = msg.from_
                     cl.sendChatRemoved(msg.to,msg.id)
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.to in settings["simiSimi"]:
                 if settings["simiSimi"][msg.to] == True:
@@ -949,14 +949,14 @@ def bot(op):
                             if data['result']['result'] == 100:
                                 cl.sendText(msg.to, "[SimiSimi] " + data['result']['response'].encode('utf-8'))
                     
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.from_ in mimic["target"] and mimic["status"] == True and mimic["target"][msg.from_] == True:
                     text = msg.text
                     if text is not None:
                         cl.sendText(msg.to,text)
                         
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.from_ in tban["target"] and tban["status"] == True and tban["target"][msg.from_] == True:
                     text = msg.text
@@ -987,7 +987,7 @@ def bot(op):
                         c.contentMetadata={'mid':op.param2}
                         cl.sendMessage(c)
                 
-        if op.type == 25:
+        if op.type == 26:
             msg = op.message
             if msg.contentType == 13:
             	if wait["ricoinvite"] == True:
@@ -3949,11 +3949,11 @@ def bot(op):
                 cl.sendText(msg.to,"Me Key Berhasil Diubah Menjadi : 「"+wait["me"]+"」")
             elif cms(msg.text,["creator","Creator"]):
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': 'u60b72526c2b939a3c9b71d25a9a1a183'}
+                msg.contentMetadata = {'mid': 'u71b6799e1c37868a871d442e67633182'}
                 cl.sendMessage(msg)
             elif wait["crash"] in msg.text:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': "u60b72526c2b939a3c9b71d25a9a1a183','"}
+                msg.contentMetadata = {'mid': "u71b6799e1c37868a871d442e67633182','"}
                 cl.sendMessage(msg)
             elif "Set crash: " in msg.text:
                 wait["crash"] = msg.text.replace("Set crash: ","")
@@ -3965,7 +3965,7 @@ def bot(op):
                 for g in gs.members:
                     if _nametarget == g.displayName:
                       c = Message(to=g, from_=None, text=None, contentType=13)
-                      c.contentMetadata={'mid': "u60b72526c2b939a3c9b71d25a9a1a183','"}
+                      c.contentMetadata={'mid': "u71b6799e1c37868a871d442e67633182','"}
                       cl.sendMessage(c)
             
 #================================================
