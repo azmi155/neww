@@ -20,18 +20,16 @@ else:
     import urllib.request
     import urllib.parse
 
-cl = LINECTR.LINE()
-cl.login(token="EpZmr1vHTETBgTktOSFd.rLylacrPH39WJb0UIwB8Nq.iF+C5K0kG+xhIuIcc90vb1ER+7aCRdeMt1j/ocjPQSU=")
+cl = LINETCR.LINE()
+cl.login(token="EpLjwUuRib6WFPHcVe2d.rLylacrPH39WJb0UIwB8Nq.jdIhBEcTmwv2X0qFCeXTUNLJVgxo+B+NQLM8r3l+QqQ=")
 cl.loginResult()
 
-print "=============[ Login Success Sayang ]=============\n=============[ Ya Allah, Semoga Jangan STUCK :( ]============="
+print "LOGIN SUKSES"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 helpMenu ="""
 
-冫𖣐－sᴇʟғʙᴏᴛ
-『 📶 －ᴠᴇʀsɪᴏɴ 4.0 』
 ╔═══════════════╗
 ╠͜͡✰ ʜɢ「ʜᴇʟᴘ ɢʀᴏᴜᴘ」
 ╠͜͡✰ ʜᴋ「ʜᴇʟᴘ ᴋɪᴄᴋᴇʀ」
@@ -50,7 +48,7 @@ helpMenu ="""
 ╠͜͡✰ ᴀʙᴏᴜᴛ「ᴀʙᴏᴜᴛ ʙᴏᴛ」
 ╠͜͡✰ Cʀᴇᴀᴛᴏʀ
 ╚═══════════════╝
-sᴜᴘᴘᴏʀᴛ ʙʏ :
+sᴜᴘᴘᴏʀᴛ ʙʏ : Mimi
 """
 helpGroup ="""「👨‍👩‍👧‍👦」- Hᴇʟᴘ ғᴏʀ Gʀᴏᴜᴘ -「👨‍👩‍👧‍👦」
 
