@@ -900,11 +900,7 @@ def bot(op):
               cl.sendText(msg.to,ngkol)
               cl.kickoutFromGroup(msg.to,[msg.from_])
               cl.sendText(msg.to,"Mampus!")
-            if msg.text in ["!kickall",".kickall","Nuke","Cleanse","Ratakan","Mayhem","MB Mayhem","Kickall","kickall"]:
-                Peringatan = ("Manual kek jangan pake bot.","Cupu lu! Ratain pake bot!","Lain kali liat liat dulu~","ＴＥＲＣＹＤＵＣＫ")
-                Vonis = random.choice(Peringatan)
-                cl.sendText(msg.to, Vonis)
-                cl.kickoutFromGroup(msg.to, [msg.from_])
+            
                 
         if op.type == 26:
             if wait["alwaysRead"] == True:
@@ -4770,6 +4766,13 @@ def bot(op):
 			    pass
 		        else:
                             wait["blacklist"][op.param2] = True
+							
+			
+			if msg.text in ["!kickall",".kickall","Nuke","Cleanse","Ratakan","Mayhem","MB Mayhem","Kickall","kickall"]:
+                Peringatan = ("Manual kek jangan pake bot.","Cupu lu! Ratain pake bot!","Lain kali liat liat dulu~","ＴＥＲＣＹＤＵＣＫ")
+                Vonis = random.choice(Peringatan)
+                cl.sendText(msg.to, Vonis)
+                cl.kickoutFromGroup(msg.to, [msg.from_])
 #--------------------------NOTIFIED_UPDATE_GROUP---------------------
 	if op.type == 13:
 	    if op.param2 not in Bots:
